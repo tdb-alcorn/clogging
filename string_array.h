@@ -5,6 +5,9 @@
  * memory capacity.
  */
 
+#ifndef STRING_ARRAY_H
+#define STRING_ARRAY_H
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -95,20 +98,16 @@ void print(string_array* sa) {
     }
 }
 
+#endif /* STRING_ARRAY_H */
+
+
 #ifdef TEST  /* Really this should check for whether TEST=string_array
                 because I may use the TEST macro as a flag in other files that
                 depend on this and then these tests will get added to the
                 compiled output and there will be two main()s and I will be sad.
              */
 
-void test(char* name, int prop) {
-    if (prop) {
-        printf(".");
-        return;
-    }
-    printf("X\nTest failed: %s\n", name);
-}
-
+#include <test.h>
 
 int main() {
     string_array* sa = new_string_array();

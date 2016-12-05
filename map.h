@@ -1,3 +1,9 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string_array.h>
+
+#define map(KEY_TYPE, VALUE_TYPE)
+
 struct map {
     char** keys;
     int** values;
